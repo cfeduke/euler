@@ -5,7 +5,7 @@ task :default do
   puts 'All problems'
   Dir[File.join(File.dirname(__FILE__), '/lib/problem/problem*.rb')].each do |file|
     puts
-    Rake::Task['problem'].invoke File.basename(file, '.rb').slice(7)
+    Rake::Task['problem'].invoke File.basename(file, '.rb').slice(7,100)
   end
 end
 
